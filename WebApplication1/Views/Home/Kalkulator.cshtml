@@ -1,0 +1,16 @@
+﻿@model WebApplication1.Models.Kalkulator
+@{
+    ViewData["Title"] = "Kalkulator";
+}
+<h1> Kalkulator prosty</h1>
+<form action="Kalkulator">
+ <br/>  <input type="number" asp-for="PierwszaLiczba" />Podaj pierwsza liczbe
+ <br />  <input type="number" asp-for="DrugaLiczba" />Podaj druga lliczbe
+ <br/>
+
+    @Html.DropDownListFor(m => m.Dzialanie,
+    new SelectList(new [] {"*", "/", "+", "-"}),
+    "Wybierz dzialanie")
+   <br/> <input type="submit"  />
+</form>
+ @ViewBag.wynik 
